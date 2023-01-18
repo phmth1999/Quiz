@@ -1,0 +1,427 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+a,i,button{
+	cursor: pointer;
+}
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.justify-content {
+	justify-content: space-between;
+}
+#wrapper{
+    width: 100%; 
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+   
+}
+.container{
+    width: 100%;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+/*Header start*/
+.header{
+	height: auto;
+	width: 100%;
+	display: flex;
+	background: black;
+	padding: 0 100px;
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	z-index: 1;
+}
+.header .logo{
+	height: 50px;
+	padding-right: 1px;
+}
+.header .logo img{
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.header .login-logout{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.header .login-logout a{
+	color: white;
+	padding: 16px;
+}
+.header .login-logout a:hover{
+	color: red;
+	background: white;
+}
+.header .login-logout p{
+	color: white;
+	padding: 0 10px;
+}
+/*Header end*/
+/*Footer start*/
+.footer{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0; 
+}
+.footer .card{
+    background: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .card .card-body{
+    color: white;
+}
+/*Footer end*/
+/* Menu */
+.menu{
+	margin-left: 20%;
+	margin-bottom: 80px;
+	margin-top: 50px;
+}
+.menu-title {
+	border-top: 1px solid gray;
+	display: flex;
+}
+
+.menu-title .menu-button {
+	padding: 10px 100px; 
+	border : none;
+	width: 33.34%;
+	background-color: transparent;
+	font-size: 16px;
+	cursor: pointer;
+	border-bottom: 1px solid gray;
+}
+
+.menu-title .menu-button.active {
+	color: blue;
+	border-right: 1px solid gray;
+	border-left: 1px solid gray;
+	border-bottom: none;
+}
+.menu-title .menu-button.active:first-child{
+	border-left: none;
+}
+.menu-title .menu-button.active:last-child{
+	border-bottom: none;
+}
+
+.menu-title .menu-button:hover {
+	color: blue;
+	border-bottom-color: gray;
+}
+
+.menu-item-content {
+	display: none;
+}
+
+.menu-item-content.active {
+	display: block;
+	margin: 10px;
+	margin-top: 20px;
+}
+
+.menu-item-content .form-add h1 {
+	text-align: center;
+}
+.form-add{
+	width:100%;
+	position: relative;
+	padding: 20px;
+	border: 1px solid #dadce0;
+}
+.form-add>p {
+	position: absolute;
+	padding: 0px 5px;
+	transform: translateY(-50%);
+	background: #fff;
+	top: -10px;
+}
+.form-add>h3 {
+	margin-bottom: 5px;
+	font-size: 15px;
+	font-weight: normal;
+}
+.form-group {
+	margin-bottom: 15px;
+	position: relative;
+	width: 100%;
+}
+.form-group input {
+	height: 50px;
+	width: 100%;
+	outline: none;
+	border: 1px solid #dadce0;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: inherit;
+	color: #202124;
+	transition: all 0.3s ease-in-out;
+}
+
+.form-group label {
+	position: absolute;
+	padding: 0px 5px;
+	left: 5px;
+	top: 50%;
+	pointer-events: none;
+	transform: translateY(-50%);
+	background: #fff;
+	transition: all 0.3s ease-in-out;
+	top: 0px;
+	font-size: 13px;
+}
+
+.form-group input:focus {
+	border: 1px solid #1a73e8;
+}
+.form-group input:focus+label{
+	color: #1a73e8;
+}
+
+.form-add input#btn-save {
+	background: white;
+	cursor: pointer;
+	border: none;
+	border: 1px solid #dadce0;
+	padding: 15px 40px;
+}
+
+.form-add input#btn-save:hover {
+	border: 1px solid blue;
+	color: blue;
+}
+.list-quizz{
+	overflow: auto;
+}
+.menu-item-content p{
+	margin: 10px 0;
+}
+.list-quizz table{
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 10px;
+}
+.list-quizz table td, th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: center;
+}
+.pagination {
+  display: inline-block;
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+.select{
+	display: flex;
+	margin-bottom: 50px;
+}
+.select div{
+	width: 50%;
+	height: 50px;
+	display: grid;
+}
+.select div label{
+	margin: 10px 0;
+}
+.select div select {
+	width: 90%;
+	height: 40px;
+	border: 1px solid #dadce0;
+	padding: 10px;
+} 
+.manage-question{
+	margin-left: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+}
+.btnAdd{
+	width: 100%;
+	height: 30px;
+	margin-top: 20px;
+	border: none;
+	background: #dadce0;
+}
+.btnAdd:hover{
+	background: red;
+}
+.form-question{
+	width: 40%;
+	margin: 20px;
+	margin-bottom: 80px;
+}
+.form-question .text-question>input{
+	height: 40px;
+	width: 400px;
+	padding: 10px;
+}
+.form-question .answers .answer-item .input-answer{
+	height: 40px;
+	width: 400px;
+	padding: 10px;
+}
+.questions .question-item .text-question{
+	display: flex;
+	margin-top: 10px;
+}
+.questions .question-item .answers{
+	margin-left: 20px;
+}
+.questions .question-item .answers .answer-item{
+	display: flex;
+	margin: 10px 0;
+}
+.questions .question-item .answers .answer-item label{
+	display: flex;
+	align-items: center;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.questions .question-item .social{
+	display: flex;
+	align-items: center;
+}
+.questions .question-item .social i{
+	margin: 0 5px;
+}
+.questions .question-item .social i:hover{
+	color: blue;
+}
+.questions .question-item .social .add{
+	color: green;
+}
+.questions .question-item .social .delete{
+	color: red;
+	display: none;
+}
+.selectQuizz select option {
+	font-size: 15px;
+}
+.selectQuizz{
+	margin-bottom: 50px;
+	width: 100%;
+	display: grid;
+}
+.selectQuizz label{
+	margin: 10px 0;
+}
+.selectQuizz select {
+	width: 100%;
+	/* height: 40px; */
+	border: 1px solid #dadce0;
+	padding: 10px;
+	
+}
+.count{
+	justify-content: center;
+	margin-left:20%;
+	margin-top: 48px;
+}
+.count>div{
+	width: 660px;
+}
+.count>div>div{
+	width: 250px;
+	height: 250px;
+	border: 1px solid;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px 40px;
+}
+.nav-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  margin-top: 50px;
+}
+.nav-bar li{
+	border-top: 1px solid #dadce0;
+}
+.nav-bar li:first-child{
+	border-top: none;
+}
+.nav-bar li:last-child{
+	border-bottom: 1px solid #dadce0;
+}
+.nav-bar li i{
+	font-size: 25px;
+	margin: 7px 20px;
+}
+.nav-bar li a {
+  display: block;
+  color: #000;
+  padding: 8px 20px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav-bar li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.nav-bar li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+.list-user{
+	margin-left: 20%;
+	margin-top: 50px;
+	overflow: auto;
+}
+.list-user table{
+	width: 100%;
+	border-collapse: collapse;
+}
+.list-user table td, th {
+  border: 1px solid #dddddd;
+  padding: 10px;
+  text-align: center;
+}
